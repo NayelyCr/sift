@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e9d6b8"/>
+      <stop offset="100%" stop-color="#8a5a34"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <g transform="translate(60,10) scale(2.8)">
+    <circle cx="50" cy="42" r="24" fill="#fff8ee" opacity="0.95"/><circle cx="41" cy="34" r="2.6" fill="#8a5a34"/><circle cx="58" cy="33" r="2.2" fill="#8a5a34"/><circle cx="50" cy="45" r="2.8" fill="#8a5a34"/><circle cx="40" cy="48" r="2.1" fill="#8a5a34"/><circle cx="61" cy="46" r="2.4" fill="#8a5a34"/><circle cx="50" cy="30" r="2" fill="#8a5a34"/>
+  </g>
+  <rect x="0" y="248" width="400" height="52" fill="#241a12" opacity="0.32"/>
+  <text x="200" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="22" fill="#fff8ee" font-weight="600">Oatmeal Raisin Cookies</text>
+</svg>
