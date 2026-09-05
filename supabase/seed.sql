@@ -68,55 +68,55 @@ values
 
   ('00000000-0000-0000-0000-000000000002', 'fudgy-brownies', 'Fudgy Brownies',
     'Dense, glossy-topped brownies with a deep chocolate flavor. No mixer required.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Chocolatebrownie.JPG/500px-Chocolatebrownie.JPG', 15, 30, 16, 'easy'),
+    '/recipes/fudgy-brownies.jpg', 15, 30, 16, 'easy'),
 
   ('00000000-0000-0000-0000-000000000003', 'vanilla-bean-cupcakes', 'Vanilla Bean Cupcakes',
     'Light, tender cupcakes flecked with real vanilla bean, topped with a simple buttercream.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Vanilla_cupcakes_with_buttercream_frosting.JPG/500px-Vanilla_cupcakes_with_buttercream_frosting.JPG', 25, 20, 12, 'medium'),
+    '/recipes/vanilla-bean-cupcakes.jpg', 25, 20, 12, 'medium'),
 
   ('00000000-0000-0000-0000-000000000004', 'cinnamon-banana-bread', 'Cinnamon Sugar Banana Bread',
     'A moist, one-bowl banana bread with a crackly cinnamon-sugar crust. The best use for spotty bananas.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Banana_bread_loaf_on_a_plate.jpg/500px-Banana_bread_loaf_on_a_plate.jpg', 15, 60, 10, 'easy'),
+    '/recipes/cinnamon-banana-bread.jpg', 15, 60, 10, 'easy'),
 
   ('00000000-0000-0000-0000-000000000005', 'no-knead-artisan-bread', 'No-Knead Artisan Bread',
     'A crackly-crusted, open-crumb loaf that needs almost no hands-on effort — just time. Start it the night before.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sourdough_Bread_Loaf.jpg/500px-Sourdough_Bread_Loaf.jpg', 20, 45, 8, 'easy'),
+    '/recipes/no-knead-artisan-bread.jpg', 20, 45, 8, 'easy'),
 
   ('00000000-0000-0000-0000-000000000006', 'flaky-buttermilk-biscuits', 'Flaky Buttermilk Biscuits',
     'Tall, buttery layers that pull apart in sheets. Best eaten warm with a little more butter.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Buttermilk_biscuit.jpg/500px-Buttermilk_biscuit.jpg', 20, 15, 8, 'medium'),
+    '/recipes/flaky-buttermilk-biscuits.jpg', 20, 15, 8, 'medium'),
 
   ('00000000-0000-0000-0000-000000000007', 'classic-apple-pie', 'Classic Apple Pie',
     'A double-crust pie packed with cinnamon-spiced apples under a golden, flaky crust.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Apple_pie.jpg/500px-Apple_pie.jpg', 45, 55, 8, 'hard'),
+    '/recipes/classic-apple-pie.jpg', 45, 55, 8, 'hard'),
 
   ('00000000-0000-0000-0000-000000000008', 'lemon-tart', 'Lemon Tart',
     'A buttery shortcrust shell filled with bright, silky lemon curd. Sharp, sweet, and simple.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Lemon_tart_%28cropped%29.jpg/500px-Lemon_tart_%28cropped%29.jpg', 30, 35, 8, 'medium'),
+    '/recipes/lemon-tart.jpg', 30, 35, 8, 'medium'),
 
   ('00000000-0000-0000-0000-000000000009', 'oatmeal-raisin-cookies', 'Oatmeal Raisin Cookies',
     'Chewy, spiced, and studded with plump raisins — a lunchbox classic.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Baking_oatmeal_chocolate_chip_cookies_79.jpg/500px-Baking_oatmeal_chocolate_chip_cookies_79.jpg', 15, 12, 24, 'easy'),
+    '/recipes/oatmeal-raisin-cookies.jpg', 15, 12, 24, 'easy'),
 
   ('00000000-0000-0000-0000-000000000010', 'red-velvet-cupcakes', 'Red Velvet Cupcakes',
     'Cocoa-tinted cupcakes with a hint of tang, finished with cream cheese frosting.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Red_velvet_cupcake.jpg/500px-Red_velvet_cupcake.jpg', 25, 20, 12, 'medium'),
+    '/recipes/red-velvet-cupcakes.jpg', 25, 20, 12, 'medium'),
 
   ('00000000-0000-0000-0000-000000000011', 'cinnamon-rolls', 'Cinnamon Rolls',
     'Soft, pillowy rolls swirled with cinnamon-brown sugar filling and finished with cream cheese icing.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Cinnamon_roll.jpg/500px-Cinnamon_roll.jpg', 30, 25, 12, 'hard'),
+    '/recipes/cinnamon-rolls.jpg', 30, 25, 12, 'hard'),
 
   ('00000000-0000-0000-0000-000000000012', 'blueberry-muffins', 'Blueberry Muffins',
     'Bakery-style muffins with domed, sugar-crusted tops and bursts of fresh blueberry in every bite.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Blueberry_muffins.jpg/500px-Blueberry_muffins.jpg', 15, 22, 12, 'easy'),
+    '/recipes/blueberry-muffins.jpg', 15, 22, 12, 'easy'),
 
   ('00000000-0000-0000-0000-000000000013', 'peanut-butter-cookies', 'Peanut Butter Cookies',
     'Just a handful of ingredients — no flour needed — for a rich, fork-marked peanut butter cookie.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Big_Gigantoid_Crunchy_Peanut_Butter-Oatmeal_Cookies.jpg/500px-Big_Gigantoid_Crunchy_Peanut_Butter-Oatmeal_Cookies.jpg', 15, 10, 24, 'easy'),
+    '/recipes/peanut-butter-cookies.jpg', 15, 10, 24, 'easy'),
 
   ('00000000-0000-0000-0000-000000000014', 'classic-carrot-cake', 'Classic Carrot Cake',
     'A spiced, ultra-moist carrot cake with walnuts and pineapple, topped with cream cheese frosting.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Carrot_cake.jpg/500px-Carrot_cake.jpg', 30, 35, 12, 'medium'),
+    '/recipes/classic-carrot-cake.jpg', 30, 35, 12, 'medium'),
 
   ('00000000-0000-0000-0000-000000000015', 'flourless-chocolate-cake', 'Flourless Chocolate Cake',
     'A dense, brownie-like cake made from just chocolate, butter, eggs, and sugar. Naturally gluten-free.',
@@ -132,7 +132,7 @@ values
 
   ('00000000-0000-0000-0000-000000000018', 'rice-krispie-treats', 'Rice Krispie Treats',
     'Gooey, marshmallowy, ready in fifteen minutes flat. A stovetop classic.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/RKTsquares.jpg/500px-RKTsquares.jpg', 10, 5, 16, 'easy'),
+    '/recipes/rice-krispie-treats.jpg', 10, 5, 16, 'easy'),
 
   ('00000000-0000-0000-0000-000000000019', 'homemade-croissants', 'Homemade Croissants',
     'Laminated, buttery, and flaky in a hundred layers. A weekend project worth every fold.',
@@ -140,7 +140,7 @@ values
 
   ('00000000-0000-0000-0000-000000000020', 'zucchini-bread', 'Zucchini Bread',
     'A moist, cinnamon-spiced quick bread that sneaks in a whole cup of grated zucchini.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Chocolate_Zucchini_Loaf_%2824149754010%29.jpg/500px-Chocolate_Zucchini_Loaf_%2824149754010%29.jpg', 15, 55, 10, 'easy')
+    '/recipes/zucchini-bread.jpg', 15, 55, 10, 'easy')
 on conflict (id) do nothing;
 
 -- ---------------------------------------------------------------------------
