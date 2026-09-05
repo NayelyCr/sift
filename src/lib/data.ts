@@ -151,7 +151,7 @@ export async function getRecipeBySlug(
     .select(
       `
       *,
-      author:profiles(id, username, display_name),
+      author:profiles!recipes_author_id_fkey(id, username, display_name),
       categories:recipe_categories(category:categories(*)),
       dietary_tags:recipe_dietary_tags(tag:dietary_tags(*)),
       ingredients:recipe_ingredients(*, ingredient:ingredients(*)),
