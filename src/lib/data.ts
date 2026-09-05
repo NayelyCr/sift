@@ -11,27 +11,52 @@ import type {
 } from "@/lib/database.types";
 
 // Shared select string for the "card" shape used on grids everywhere.
+//
+// NOTE: `recipe_stats` is a plain SQL view (an aggregate over `ratings`), not
+// a table with a real foreign key to `recipes`, so PostgREST can't embed it
+// with `stats:recipe_stats(*)` — that fails at request time with PGRST200
+// ("Could not find a relationship between 'recipes' and 'recipe_stats'").
+// We fetch it separately instead (see `attachStats` below) and merge it in.
 const RECIPE_CARD_SELECT = `
   *,
   categories:recipe_categories(category:categories(*)),
-  dietary_tags:recipe_dietary_tags(tag:dietary_tags(*)),
-  stats:recipe_stats(*)
+  dietary_tags:recipe_dietary_tags(tag:dietary_tags(*))
 `;
 
 type RawCardRow = Record<string, unknown> & {
   categories?: { category: Category }[] | null;
   dietary_tags?: { tag: DietaryTag }[] | null;
-  stats?: unknown;
 };
 
 function normalizeCard(row: RawCardRow): RecipeCardData {
-  const stats = Array.isArray(row.stats) ? row.stats[0] : row.stats;
   return {
     ...(row as unknown as RecipeCardData),
     categories: (row.categories ?? []).map((c) => c.category).filter(Boolean),
     dietary_tags: (row.dietary_tags ?? []).map((d) => d.tag).filter(Boolean),
-    stats: (stats as RecipeCardData["stats"]) ?? null,
+    stats: null,
   };
+}
+
+// Fetches recipe_stats for a batch of recipes and merges it in, since it
+// can't be embedded directly in the main select (see note above).
+async function attachStats<T extends { id: string; stats: RecipeCardData["stats"] }>(
+  supabase: Awaited<ReturnType<typeof createClient>>,
+  recipes: T[]
+): Promise<T[]> {
+  if (recipes.length === 0) return recipes;
+  const ids = recipes.map((r) => r.id);
+  const { data, error } = await supabase
+    .from("recipe_stats")
+    .select("*")
+    .in("recipe_id", ids);
+  if (error) throw error;
+  const statsById = new Map(
+    (data ?? []).map((s) => [(s as { recipe_id: string }).recipe_id, s])
+  );
+  return recipes.map((r) => ({
+    ...r,
+    stats: (statsById.get(r.id) as RecipeCardData["stats"]) ?? null,
+  }));
 }
 
 export type RecipeFilters = {
@@ -65,8 +90,9 @@ export async function getRecipes(filters: RecipeFilters = {}) {
   const { data, error } = await query;
   if (error) throw error;
 
-  let recipes = (data ?? []).map((row) =>
-    normalizeCard(row as unknown as RawCardRow)
+  let recipes = await attachStats(
+    supabase,
+    (data ?? []).map((row) => normalizeCard(row as unknown as RawCardRow))
   );
 
   // Category / diet filters and rating sort are applied in memory since they
@@ -129,8 +155,7 @@ export async function getRecipeBySlug(
       categories:recipe_categories(category:categories(*)),
       dietary_tags:recipe_dietary_tags(tag:dietary_tags(*)),
       ingredients:recipe_ingredients(*, ingredient:ingredients(*)),
-      steps:recipe_steps(*),
-      stats:recipe_stats(*)
+      steps:recipe_steps(*)
     `
     )
     .eq("slug", slug)
@@ -145,7 +170,12 @@ export async function getRecipeBySlug(
     steps: RecipeWithDetails["steps"];
   };
 
-  const stats = Array.isArray(row.stats) ? row.stats[0] : row.stats;
+  const { data: statsRow, error: statsError } = await supabase
+    .from("recipe_stats")
+    .select("*")
+    .eq("recipe_id", row.id as string)
+    .maybeSingle();
+  if (statsError) throw statsError;
 
   return {
     ...(row as unknown as RecipeWithDetails),
@@ -153,7 +183,7 @@ export async function getRecipeBySlug(
     dietary_tags: (row.dietary_tags ?? []).map((d) => d.tag).filter(Boolean),
     ingredients: [...row.ingredients].sort((a, b) => a.sort_order - b.sort_order),
     steps: [...row.steps].sort((a, b) => a.step_number - b.step_number),
-    stats: (stats as RecipeWithDetails["stats"]) ?? null,
+    stats: (statsRow as RecipeWithDetails["stats"]) ?? null,
   };
 }
 
@@ -193,7 +223,11 @@ export async function getUserFavorites(userId: string) {
     .order("created_at", { ascending: false });
   if (error) throw error;
   const rows = (data ?? []) as unknown as { recipe: RawCardRow | null }[];
-  return rows.map((r) => r.recipe).filter(Boolean).map((r) => normalizeCard(r as RawCardRow));
+  const recipes = rows
+    .map((r) => r.recipe)
+    .filter(Boolean)
+    .map((r) => normalizeCard(r as RawCardRow));
+  return attachStats(supabase, recipes);
 }
 
 export async function getUserRecipes(userId: string) {
@@ -204,7 +238,8 @@ export async function getUserRecipes(userId: string) {
     .eq("author_id", userId)
     .order("created_at", { ascending: false });
   if (error) throw error;
-  return (data ?? []).map((row) => normalizeCard(row as unknown as RawCardRow));
+  const recipes = (data ?? []).map((row) => normalizeCard(row as unknown as RawCardRow));
+  return attachStats(supabase, recipes);
 }
 
 export async function getUserRatingForRecipe(userId: string, recipeId: string) {
