@@ -3,6 +3,7 @@ import { ArrowRight, Search, Users, PenLine } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { RecipeCard } from "@/components/recipe-card";
+import { Reveal } from "@/components/reveal";
 import { getCategories, getFeaturedRecipes } from "@/lib/data";
 
 // Recipe data changes whenever someone submits or rates a recipe, and this
@@ -18,8 +19,12 @@ export default async function HomePage() {
 
   return (
     <div>
-      <section className="border-b bg-secondary/40">
-        <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-4 py-16 sm:px-6 sm:py-24">
+      <section className="relative overflow-hidden border-b bg-secondary/40">
+        <div
+          aria-hidden="true"
+          className="oven-glow pointer-events-none absolute left-1/2 top-0 z-0 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/3 rounded-full bg-primary/30 blur-3xl"
+        />
+        <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-start gap-6 px-4 py-16 sm:px-6 sm:py-24">
           <span className="rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-wide text-accent-foreground">
             A community baking cookbook
           </span>
@@ -46,62 +51,73 @@ export default async function HomePage() {
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="flex flex-wrap gap-2">
-          {categories.map((c) => (
-            <Link
-              key={c.id}
-              href={`/recipes?category=${c.slug}`}
-              className="rounded-full border bg-card px-4 py-1.5 text-sm font-medium transition-colors hover:border-primary hover:text-primary"
-            >
-              {c.name}
-            </Link>
+          {categories.map((c, i) => (
+            <Reveal key={c.id} delay={i * 40}>
+              <Link
+                href={`/recipes?category=${c.slug}`}
+                className="rounded-full border bg-card px-4 py-1.5 text-sm font-medium transition-all hover:-translate-y-0.5 hover:border-primary hover:text-primary"
+              >
+                {c.name}
+              </Link>
+            </Reveal>
           ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
-        <div className="mb-6 flex items-end justify-between">
-          <h2 className="font-display text-2xl font-semibold">Latest recipes</h2>
-          <Link
-            href="/recipes"
-            className="flex items-center gap-1 text-sm font-medium text-primary hover:underline"
-          >
-            View all
-            <ArrowRight className="h-3.5 w-3.5" />
-          </Link>
-        </div>
+        <Reveal>
+          <div className="mb-6 flex items-end justify-between">
+            <h2 className="font-display text-2xl font-semibold">Latest recipes</h2>
+            <Link
+              href="/recipes"
+              className="flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+            >
+              View all
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
+        </Reveal>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {recipes.map((recipe) => (
-            <RecipeCard key={recipe.id} recipe={recipe} />
+          {recipes.map((recipe, i) => (
+            <Reveal key={recipe.id} delay={(i % 3) * 80}>
+              <RecipeCard recipe={recipe} />
+            </Reveal>
           ))}
         </div>
       </section>
 
       <section className="border-t bg-secondary/40">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-16 sm:px-6 md:grid-cols-3">
-          <div className="flex flex-col gap-2">
-            <Search className="h-6 w-6 text-primary" />
-            <h3 className="font-display text-lg font-semibold">Find your next bake</h3>
-            <p className="text-sm text-muted-foreground">
-              Filter by category, dietary need, or how quick it is — from
-              15-minute cookies to weekend croissant projects.
-            </p>
-          </div>
-          <div className="flex flex-col gap-2">
-            <PenLine className="h-6 w-6 text-primary" />
-            <h3 className="font-display text-lg font-semibold">Share your own</h3>
-            <p className="text-sm text-muted-foreground">
-              Create an account and submit your own recipes, complete with
-              ingredients, steps, and dietary tags.
-            </p>
-          </div>
-          <div className="flex flex-col gap-2">
-            <Users className="h-6 w-6 text-primary" />
-            <h3 className="font-display text-lg font-semibold">Rate and review</h3>
-            <p className="text-sm text-muted-foreground">
-              Leave star ratings and notes on recipes you&apos;ve tried, and save
-              favorites to come back to later.
-            </p>
-          </div>
+          <Reveal delay={0}>
+            <div className="flex flex-col gap-2">
+              <Search className="h-6 w-6 text-primary" />
+              <h3 className="font-display text-lg font-semibold">Find your next bake</h3>
+              <p className="text-sm text-muted-foreground">
+                Filter by category, dietary need, or how quick it is — from
+                15-minute cookies to weekend croissant projects.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="flex flex-col gap-2">
+              <PenLine className="h-6 w-6 text-primary" />
+              <h3 className="font-display text-lg font-semibold">Share your own</h3>
+              <p className="text-sm text-muted-foreground">
+                Create an account and submit your own recipes, complete with
+                ingredients, steps, and dietary tags.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={200}>
+            <div className="flex flex-col gap-2">
+              <Users className="h-6 w-6 text-primary" />
+              <h3 className="font-display text-lg font-semibold">Rate and review</h3>
+              <p className="text-sm text-muted-foreground">
+                Leave star ratings and notes on recipes you&apos;ve tried, and save
+                favorites to come back to later.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
     </div>

@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { RecipeCard } from "@/components/recipe-card";
 import { RecipeFilters } from "@/components/recipe-filters";
+import { Reveal } from "@/components/reveal";
 import { getCategories, getDietaryTags, getRecipes } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -60,8 +61,10 @@ export default async function RecipesPage({
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {recipes.map((recipe) => (
-            <RecipeCard key={recipe.id} recipe={recipe} />
+          {recipes.map((recipe, i) => (
+            <Reveal key={recipe.id} delay={(i % 6) * 60}>
+              <RecipeCard recipe={recipe} />
+            </Reveal>
           ))}
         </div>
       )}

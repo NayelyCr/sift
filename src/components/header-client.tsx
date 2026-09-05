@@ -43,11 +43,17 @@ export function HeaderClient({ user }: { user: NavUser }) {
           <Link
             key={link.href}
             href={link.href}
-            className={`text-sm font-medium transition-colors hover:text-primary ${
+            className={`group relative text-sm font-medium transition-colors hover:text-primary ${
               pathname === link.href ? "text-primary" : "text-foreground/80"
             }`}
           >
             {link.label}
+            <span
+              aria-hidden="true"
+              className={`absolute inset-x-0 -bottom-1 h-0.5 origin-left scale-x-0 rounded-full bg-primary transition-transform duration-300 ease-out group-hover:scale-x-100 ${
+                pathname === link.href ? "scale-x-100" : ""
+              }`}
+            />
           </Link>
         ))}
       </nav>

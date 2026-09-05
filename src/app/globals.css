@@ -142,3 +142,77 @@ body {
     display: none;
   }
 }
+
+/* Page transitions (app/template.tsx) */
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition {
+  animation: page-fade-in 0.4s ease-out both;
+}
+
+/* Hero "oven glow" accent */
+@keyframes oven-glow-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+.oven-glow {
+  animation: oven-glow-pulse 7s ease-in-out infinite;
+}
+
+/* Steam wisps rising from the header logo */
+@keyframes steam-rise {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.55;
+  }
+  60% {
+    transform: translateY(-9px) scaleX(1.4);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-16px) scaleX(0.8);
+    opacity: 0;
+  }
+}
+
+.steam-wisp {
+  animation: steam-rise 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition {
+    animation: none;
+  }
+  .oven-glow {
+    animation: none;
+    opacity: 0.35;
+  }
+  .steam-wisp {
+    display: none;
+  }
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

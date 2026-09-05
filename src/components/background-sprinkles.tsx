@@ -50,7 +50,7 @@ function buildParticles(): Particle[] {
 }
 
 export function BackgroundSprinkles() {
-  const particles = useMemo(buildParticles, []);
+  const particles = useMemo(() => buildParticles(), []);
 
   return (
     <div

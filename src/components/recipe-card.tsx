@@ -18,7 +18,7 @@ export function RecipeCard({ recipe }: { recipe: RecipeCardData }) {
 
   return (
     <Link href={`/recipes/${recipe.slug}`} className="group block">
-      <Card className="h-full overflow-hidden py-0 transition-shadow hover:shadow-md">
+      <Card className="h-full overflow-hidden py-0 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg">
         <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted">
           {recipe.image_url ? (
             // eslint-disable-next-line @next/next/no-img-element -- arbitrary user-submitted URLs, so we skip next/image's domain allowlist
