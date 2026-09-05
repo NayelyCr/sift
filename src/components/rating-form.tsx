@@ -24,6 +24,14 @@ export function RatingForm({
   const [hovered, setHovered] = useState(0);
   const [review, setReview] = useState(existingReview ?? "");
   const [isPending, startTransition] = useTransition();
+  // Bumped on every star pick; remounting the stars on each bump replays
+  // their pop animation, staggered left-to-right for a little ripple.
+  const [pulseKey, setPulseKey] = useState(0);
+
+  function handleSelect(star: number) {
+    setRating(star);
+    setPulseKey((k) => k + 1);
+  }
 
   function handleSubmit() {
     if (rating < 1) {
@@ -50,16 +58,19 @@ export function RatingForm({
           <button
             key={star}
             type="button"
-            onClick={() => setRating(star)}
+            onClick={() => handleSelect(star)}
             onMouseEnter={() => setHovered(star)}
             onMouseLeave={() => setHovered(0)}
             className="p-0.5"
             aria-label={`${star} star${star > 1 ? "s" : ""}`}
           >
             <Star
+              key={`${star}-${pulseKey}`}
+              style={{ animationDelay: `${(star - 1) * 35}ms` }}
               className={cn(
                 "h-6 w-6 text-muted-foreground transition-colors",
-                (hovered || rating) >= star && "fill-accent-foreground text-accent-foreground"
+                (hovered || rating) >= star && "fill-accent-foreground text-accent-foreground",
+                rating >= star && pulseKey > 0 && "animate-star-pop"
               )}
             />
           </button>

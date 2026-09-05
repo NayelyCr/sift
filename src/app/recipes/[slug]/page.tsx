@@ -8,6 +8,8 @@ import { Separator } from "@/components/ui/separator";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { FavoriteButton } from "@/components/favorite-button";
 import { RatingForm } from "@/components/rating-form";
+import { IngredientChecklist } from "@/components/ingredient-checklist";
+import { StepChecklist } from "@/components/step-checklist";
 import {
   getCurrentUser,
   getRatingsForRecipe,
@@ -119,34 +121,18 @@ export default async function RecipeDetailPage({ params }: { params: Params }) {
       <div className="grid grid-cols-1 gap-10 md:grid-cols-[1fr_1.5fr]">
         <div>
           <h2 className="mb-4 font-display text-xl font-semibold">Ingredients</h2>
-          <ul className="flex flex-col gap-2.5">
-            {recipe.ingredients.map((ri) => (
-              <li key={ri.id} className="flex gap-2 text-sm">
-                <span className="font-medium">
-                  {ri.quantity}
-                  {ri.unit ? ` ${ri.unit}` : ""}
-                </span>
-                <span>
-                  {ri.ingredient.name}
-                  {ri.notes ? `, ${ri.notes}` : ""}
-                </span>
-              </li>
-            ))}
-          </ul>
+          <p className="mb-2 text-xs text-muted-foreground">
+            Tap an ingredient to check it off as you gather it.
+          </p>
+          <IngredientChecklist ingredients={recipe.ingredients} />
         </div>
 
         <div>
           <h2 className="mb-4 font-display text-xl font-semibold">Instructions</h2>
-          <ol className="flex flex-col gap-5">
-            {recipe.steps.map((step) => (
-              <li key={step.id} className="flex gap-3 text-sm leading-relaxed">
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-semibold text-accent-foreground">
-                  {step.step_number}
-                </span>
-                <span className="pt-0.5">{step.instruction}</span>
-              </li>
-            ))}
-          </ol>
+          <p className="mb-2 text-xs text-muted-foreground">
+            Tap a step to check it off as you go.
+          </p>
+          <StepChecklist steps={recipe.steps} />
         </div>
       </div>
 
