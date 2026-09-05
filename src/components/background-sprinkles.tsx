@@ -1,6 +1,20 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useSyncExternalStore } from "react";
+
+const emptySubscribe = () => () => {};
+
+// True only once the client has taken over (server snapshot is always
+// false). Using useSyncExternalStore instead of a mounted-state effect
+// avoids both the hydration mismatch below and React's "don't call
+// setState synchronously inside an effect" lint rule.
+function useIsClient() {
+  return useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
+}
 
 // Warm palette: flour dust (white/cream) plus a few bakery sprinkle colors
 // that stay in harmony with the site's terracotta/cream theme.
@@ -52,6 +66,17 @@ function buildParticles(): Particle[] {
 export function BackgroundSprinkles() {
   const particles = useMemo(() => buildParticles(), []);
 
+  // This layer is purely decorative and random, and browsers normalize
+  // some of the inline style values below (hex colors -> rgb(), float
+  // pixel lengths -> a different string precision) as soon as they parse
+  // the server HTML. React's hydration check then flags a mismatch even
+  // though the underlying values are identical. Rendering the particles
+  // only after mount sidesteps that entirely — there's no server-rendered
+  // markup for these spans to be checked against.
+  const isClient = useIsClient();
+
+  if (!isClient) return null;
+
   return (
     <div
       aria-hidden="true"
@@ -63,8 +88,8 @@ export function BackgroundSprinkles() {
           className="sprinkle-particle absolute top-[-5%] rounded-full"
           style={{
             left: `${p.left}%`,
-            width: p.size,
-            height: p.size,
+            width: `${p.size}px`,
+            height: `${p.size}px`,
             backgroundColor: p.color,
             animationDuration: `${p.duration}s`,
             animationDelay: `${p.delay}s`,
