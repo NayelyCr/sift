@@ -112,3 +112,33 @@ body {
   background: var(--accent);
   color: var(--accent-foreground);
 }
+
+@keyframes sprinkle-fall {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.75;
+  }
+  92% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate3d(var(--drift, 20px), 110vh, 0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.sprinkle-particle {
+  animation-name: sprinkle-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sprinkle-field {
+    display: none;
+  }
+}
