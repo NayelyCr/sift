@@ -120,15 +120,15 @@ values
 
   ('00000000-0000-0000-0000-000000000015', 'flourless-chocolate-cake', 'Flourless Chocolate Cake',
     'A dense, brownie-like cake made from just chocolate, butter, eggs, and sugar. Naturally gluten-free.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Chocolate_fudge_cake.jpg/500px-Chocolate_fudge_cake.jpg', 20, 35, 10, 'medium'),
+    '/recipes/flourless-chocolate-cake.jpg', 20, 35, 10, 'medium'),
 
   ('00000000-0000-0000-0000-000000000016', 'vegan-chocolate-chip-cookies', 'Vegan Chocolate Chip Cookies',
     'Crisp-edged, chewy-centered chocolate chip cookies made with no butter, dairy, or eggs.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Vegan_oatmeal_chocolate_chip_cookies%2C_April_2009.jpg/500px-Vegan_oatmeal_chocolate_chip_cookies%2C_April_2009.jpg', 15, 12, 20, 'easy'),
+    '/recipes/vegan-chocolate-chip-cookies.jpg', 15, 12, 20, 'easy'),
 
   ('00000000-0000-0000-0000-000000000017', 'no-bake-cheesecake', 'No-Bake Cheesecake',
     'A creamy, tangy cheesecake set in the fridge instead of the oven, on a graham cracker crust.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Japanese_no-bake_cheesecake.jpg/500px-Japanese_no-bake_cheesecake.jpg', 25, 0, 10, 'easy'),
+    '/recipes/no-bake-cheesecake.jpg', 25, 0, 10, 'easy'),
 
   ('00000000-0000-0000-0000-000000000018', 'rice-krispie-treats', 'Rice Krispie Treats',
     'Gooey, marshmallowy, ready in fifteen minutes flat. A stovetop classic.',
@@ -136,7 +136,7 @@ values
 
   ('00000000-0000-0000-0000-000000000019', 'homemade-croissants', 'Homemade Croissants',
     'Laminated, buttery, and flaky in a hundred layers. A weekend project worth every fold.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Croissant.jpg/500px-Croissant.jpg', 60, 20, 8, 'hard'),
+    '/recipes/homemade-croissants.jpg', 60, 20, 8, 'hard'),
 
   ('00000000-0000-0000-0000-000000000020', 'zucchini-bread', 'Zucchini Bread',
     'A moist, cinnamon-spiced quick bread that sneaks in a whole cup of grated zucchini.',
