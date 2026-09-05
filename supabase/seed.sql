@@ -64,7 +64,7 @@ insert into public.recipes
 values
   ('00000000-0000-0000-0000-000000000001', 'classic-chocolate-chip-cookies', 'Classic Chocolate Chip Cookies',
     'Crisp edges, chewy centers, and pools of melted chocolate — the cookie every other cookie is judged against.',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Chocolate_chip_cookies.jpg/500px-Chocolate_chip_cookies.jpg', 20, 12, 24, 'easy'),
+    '/recipes/classic-chocolate-chip-cookies.jpg', 20, 12, 24, 'easy'),
 
   ('00000000-0000-0000-0000-000000000002', 'fudgy-brownies', 'Fudgy Brownies',
     'Dense, glossy-topped brownies with a deep chocolate flavor. No mixer required.',
