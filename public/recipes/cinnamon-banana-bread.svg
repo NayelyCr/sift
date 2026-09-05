@@ -1,15 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="800" height="600">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f6c9a0"/>
-      <stop offset="100%" stop-color="#bf5330"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.15" y2="1">
+      <stop offset="0%" stop-color="#f2dfb8"/>
+      <stop offset="100%" stop-color="#c98a4a"/>
     </linearGradient>
+    <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
   </defs>
   <rect width="400" height="300" fill="url(#bg)"/>
-  <g transform="translate(60,10) scale(2.8)">
-    <path d="M26 52 q0 -22 24 -22 q24 0 24 22 z" fill="#fff8ee" opacity="0.95"/><path d="M34 52 q2 -14 16 -16 q14 2 16 16" fill="none" stroke="#8a5a34" stroke-width="1.4" opacity="0.4"/>
-  </g>
-  <rect x="0" y="248" width="400" height="52" fill="#241a12" opacity="0.32"/>
-  <text x="200" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
-        font-size="22" fill="#fff8ee" font-weight="600">Cinnamon Sugar Banana Bread</text>
+  <ellipse cx="200" cy="232" rx="100" ry="15" fill="url(#shadow)"/>
+  <path d="M105,210 Q105,130 170,128 L170,210 Z" fill="#7c5129"/>
+  <path d="M112,206 Q112,138 168,135 L168,206 Z" fill="#e8c98a"/>
+  <path d="M175,225 L175,110 Q215,92 255,110 L255,225 Z" fill="#754c27"/>
+  <path d="M182,221 L182,118 Q215,102 248,118 L248,221 Z" fill="#e8c98a"/>
+  <circle cx="223" cy="132" r="2.6" fill="#7a5230" opacity="0.85"/>
+  <circle cx="200" cy="189" r="3.4" fill="#7a5230" opacity="0.85"/>
+  <circle cx="236" cy="137" r="2.8" fill="#7a5230" opacity="0.85"/>
+  <circle cx="190" cy="147" r="3.0" fill="#7a5230" opacity="0.85"/>
+  <circle cx="189" cy="146" r="3.3" fill="#7a5230" opacity="0.85"/>
+  <circle cx="217" cy="148" r="3.2" fill="#7a5230" opacity="0.85"/>
+  <circle cx="232" cy="131" r="3.6" fill="#7a5230" opacity="0.85"/>
+  <circle cx="226" cy="157" r="2.3" fill="#7a5230" opacity="0.85"/>
+  <circle cx="240" cy="157" r="2.2" fill="#7a5230" opacity="0.85"/>
+  <circle cx="193" cy="198" r="3.2" fill="#7a5230" opacity="0.85"/>
+  <path d="M182,121 Q215,105 248,121 L248,129 Q215,113 182,129 Z" fill="#edd6a7" opacity="0.6"/>
 </svg>

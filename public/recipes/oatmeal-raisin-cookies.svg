@@ -1,15 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="800" height="600">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#e9d6b8"/>
-      <stop offset="100%" stop-color="#8a5a34"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.15" y2="1">
+      <stop offset="0%" stop-color="#efdfc0"/>
+      <stop offset="100%" stop-color="#b98a52"/>
     </linearGradient>
+    <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
   </defs>
   <rect width="400" height="300" fill="url(#bg)"/>
-  <g transform="translate(60,10) scale(2.8)">
-    <circle cx="50" cy="42" r="24" fill="#fff8ee" opacity="0.95"/><circle cx="41" cy="34" r="2.6" fill="#8a5a34"/><circle cx="58" cy="33" r="2.2" fill="#8a5a34"/><circle cx="50" cy="45" r="2.8" fill="#8a5a34"/><circle cx="40" cy="48" r="2.1" fill="#8a5a34"/><circle cx="61" cy="46" r="2.4" fill="#8a5a34"/><circle cx="50" cy="30" r="2" fill="#8a5a34"/>
-  </g>
-  <rect x="0" y="248" width="400" height="52" fill="#241a12" opacity="0.32"/>
-  <text x="200" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
-        font-size="22" fill="#fff8ee" font-weight="600">Oatmeal Raisin Cookies</text>
+  <ellipse cx="200" cy="235" rx="95" ry="16" fill="url(#shadow)"/>
+  <circle cx="200" cy="160" r="88" fill="#a47e4d"/>
+  <circle cx="200" cy="153" r="88" fill="#c99a5f"/>
+  <circle cx="278" cy="153" r="10" fill="#cfa672" opacity="0.35"/>
+  <circle cx="271" cy="185" r="14" fill="#cfa672" opacity="0.35"/>
+  <circle cx="252" cy="211" r="10" fill="#cfa672" opacity="0.35"/>
+  <circle cx="224" cy="227" r="14" fill="#cfa672" opacity="0.35"/>
+  <circle cx="192" cy="231" r="10" fill="#cfa672" opacity="0.35"/>
+  <circle cx="161" cy="221" r="14" fill="#cfa672" opacity="0.35"/>
+  <circle cx="137" cy="199" r="10" fill="#cfa672" opacity="0.35"/>
+  <circle cx="124" cy="169" r="14" fill="#cfa672" opacity="0.35"/>
+  <circle cx="124" cy="137" r="10" fill="#cfa672" opacity="0.35"/>
+  <circle cx="137" cy="107" r="14" fill="#cfa672" opacity="0.35"/>
+  <circle cx="161" cy="85" r="10" fill="#cfa672" opacity="0.35"/>
+  <circle cx="192" cy="75" r="14" fill="#cfa672" opacity="0.35"/>
+  <circle cx="224" cy="79" r="10" fill="#cfa672" opacity="0.35"/>
+  <circle cx="252" cy="95" r="14" fill="#cfa672" opacity="0.35"/>
+  <circle cx="271" cy="121" r="10" fill="#cfa672" opacity="0.35"/>
+  <ellipse cx="155" cy="123" rx="9" ry="4" fill="#6b3a1e" opacity="0.85" transform="rotate(20 155 123)"/>
+  <ellipse cx="220" cy="113" rx="9" ry="4" fill="#6b3a1e" opacity="0.85" transform="rotate(-15 220 113)"/>
+  <ellipse cx="248" cy="153" rx="9" ry="4" fill="#6b3a1e" opacity="0.85" transform="rotate(40 248 153)"/>
+  <ellipse cx="190" cy="163" rx="9" ry="4" fill="#6b3a1e" opacity="0.85" transform="rotate(-30 190 163)"/>
+  <ellipse cx="150" cy="178" rx="9" ry="4" fill="#6b3a1e" opacity="0.85" transform="rotate(10 150 178)"/>
+  <ellipse cx="218" cy="191" rx="9" ry="4" fill="#6b3a1e" opacity="0.85" transform="rotate(-20 218 191)"/>
+  <ellipse cx="245" cy="188" rx="9" ry="4" fill="#6b3a1e" opacity="0.85" transform="rotate(25 245 188)"/>
+  <ellipse cx="165" cy="195" rx="9" ry="4" fill="#6b3a1e" opacity="0.85" transform="rotate(5 165 195)"/>
+  <circle cx="180" cy="143" r="4" fill="#4a2815"/>
+  <circle cx="230" cy="168" r="3.5" fill="#4a2815"/>
+  <circle cx="200" cy="183" r="4" fill="#4a2815"/>
+  <circle cx="160" cy="153" r="3" fill="#4a2815"/>
 </svg>

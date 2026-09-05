@@ -1,15 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="800" height="600">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f6c9a0"/>
-      <stop offset="100%" stop-color="#bf5330"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.15" y2="1">
+      <stop offset="0%" stop-color="#f6e6c8"/>
+      <stop offset="100%" stop-color="#d19a52"/>
     </linearGradient>
+    <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
   </defs>
   <rect width="400" height="300" fill="url(#bg)"/>
-  <g transform="translate(60,10) scale(2.8)">
-    <circle cx="38" cy="46" r="13" fill="#fff8ee" opacity="0.95"/><circle cx="56" cy="46" r="13" fill="#fff8ee" opacity="0.95"/><circle cx="47" cy="32" r="13" fill="#fff8ee" opacity="0.95"/><path d="M38 46 q9 -9 18 0 M38 46 q4.5 -14 9 -14 M56 46 q-4.5 -14 -9 -14" stroke="#8a5a34" stroke-width="1.2" fill="none" opacity="0.35"/>
-  </g>
-  <rect x="0" y="248" width="400" height="52" fill="#241a12" opacity="0.32"/>
-  <text x="200" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
-        font-size="22" fill="#fff8ee" font-weight="600">Cinnamon Rolls</text>
+  <ellipse cx="200" cy="233" rx="85" ry="14" fill="url(#shadow)"/>
+  <circle cx="200" cy="165" r="82" fill="#b99c68"/>
+  <circle cx="200" cy="158" r="82" fill="#e8c383"/>
+  <path d="M206.0,158.0 L206.6,159.5 L206.8,161.3 L206.5,163.2 L205.7,165.1 L204.3,166.9 L202.4,168.4 L200.1,169.4 L197.4,169.9 L194.5,169.8 L191.5,168.9 L188.7,167.2 L186.3,164.8 L184.3,161.8 L183.1,158.2 L182.7,154.3 L183.3,150.3 L184.8,146.3 L187.3,142.6 L190.6,139.5 L194.8,137.1 L199.5,135.7 L204.6,135.4 L209.9,136.2 L214.9,138.4 L219.5,141.6 L223.3,146.0 L226.2,151.3 L227.8,157.2 L228.0,163.5 L226.8,169.9 L224.1,176.0 L220.0,181.5 L214.7,186.1 L208.3,189.4 L201.2,191.2 L193.6,191.4 L186.1,189.9 L178.9,186.6 L172.5,181.7 L167.2,175.4 L163.4,167.9 L161.4,159.6 L161.2,150.9 L163.0,142.2 L166.8,133.9 L172.5,126.6 L179.8,120.6 L188.3,116.3 L197.8,113.9 L207.8,113.8 L217.7,115.9 L227.0,120.2 L235.3,126.6 L242.1,134.9 L246.9,144.6 L249.5,155.2 L249.6,166.4 L247.3,177.5 L242.4,187.9 L235.2,197.1 L226.1,204.7 L215.3,210.0 L203.5,212.9 L191.1,213.1 L178.8,210.4 L167.3,205.1 L157.1,197.2 L148.8,187.1 L142.9,175.2 L139.7,162.2 L139.5,148.6 L142.4,135.2 L148.2,122.5 L156.8,111.4 L167.8,102.3 L180.7,95.8 L194.9,92.3 L209.7,92.0 L224.4,95.1 L238.1,101.4 L250.3,110.8 L260.2,122.7 L267.3,136.7 L271.1,152.0 L271.4,168.0 L268.1,183.9 L261.4,198.8 L251.3,211.9 L238.5,222.6 L223.5,230.3" stroke="#a8642c" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.9"/>
+  <ellipse cx="170" cy="118" rx="14" ry="7" fill="#fff8ee" opacity="0.9"/>
+  <ellipse cx="220" cy="113" rx="10" ry="5" fill="#fff8ee" opacity="0.9"/>
+  <ellipse cx="245" cy="148" rx="9" ry="4" fill="#fff8ee" opacity="0.9"/>
+  <ellipse cx="155" cy="168" rx="8" ry="4" fill="#fff8ee" opacity="0.9"/>
+  <ellipse cx="200" cy="188" rx="12" ry="6" fill="#fff8ee" opacity="0.9"/>
+  <ellipse cx="235" cy="193" rx="7" ry="4" fill="#fff8ee" opacity="0.9"/>
 </svg>

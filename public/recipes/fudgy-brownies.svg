@@ -1,15 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="800" height="600">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="0.15" y2="1">
       <stop offset="0%" stop-color="#f4e1b8"/>
       <stop offset="100%" stop-color="#c9793f"/>
     </linearGradient>
+    <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
   </defs>
   <rect width="400" height="300" fill="url(#bg)"/>
-  <g transform="translate(60,10) scale(2.8)">
-    <rect x="27" y="27" width="46" height="30" rx="3" fill="#fff8ee" opacity="0.95"/><rect x="27" y="27" width="46" height="30" rx="3" fill="none" stroke="#6b4226" stroke-width="1.5" opacity="0.4"/><line x1="42" y1="27" x2="42" y2="57" stroke="#6b4226" stroke-width="1.2" opacity="0.35"/><line x1="58" y1="27" x2="58" y2="57" stroke="#6b4226" stroke-width="1.2" opacity="0.35"/><line x1="27" y1="42" x2="73" y2="42" stroke="#6b4226" stroke-width="1.2" opacity="0.35"/>
-  </g>
-  <rect x="0" y="248" width="400" height="52" fill="#241a12" opacity="0.32"/>
-  <text x="200" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
-        font-size="22" fill="#fff8ee" font-weight="600">Fudgy Brownies</text>
+  <ellipse cx="200" cy="232" rx="100" ry="14" fill="url(#shadow)"/>
+  <rect x="110" y="131" width="124" height="105" rx="6" fill="#25170e"/>
+  <rect x="110" y="123" width="124" height="105" rx="6" fill="#3a2417"/>
+  <rect x="116" y="129" width="112" height="30" rx="4" fill="#5c3a24" opacity="0.55"/>
+  <circle cx="130" cy="163" r="4" fill="#7c614f" opacity="0.6"/>
+  <circle cx="180" cy="188" r="4" fill="#7c614f" opacity="0.6"/>
+  <circle cx="205" cy="153" r="4" fill="#7c614f" opacity="0.6"/>
+  <circle cx="155" cy="203" r="4" fill="#7c614f" opacity="0.6"/>
+  <rect x="164" y="105" width="124" height="105" rx="6" fill="#25170e"/>
+  <rect x="164" y="97" width="124" height="105" rx="6" fill="#3a2417"/>
+  <rect x="170" y="103" width="112" height="30" rx="4" fill="#5c3a24" opacity="0.55"/>
+  <circle cx="184" cy="137" r="4" fill="#7c614f" opacity="0.6"/>
+  <circle cx="234" cy="162" r="4" fill="#7c614f" opacity="0.6"/>
+  <circle cx="259" cy="127" r="4" fill="#7c614f" opacity="0.6"/>
+  <circle cx="209" cy="177" r="4" fill="#7c614f" opacity="0.6"/>
 </svg>

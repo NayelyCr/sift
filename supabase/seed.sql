@@ -64,11 +64,11 @@ insert into public.recipes
 values
   ('00000000-0000-0000-0000-000000000001', 'classic-chocolate-chip-cookies', 'Classic Chocolate Chip Cookies',
     'Crisp edges, chewy centers, and pools of melted chocolate — the cookie every other cookie is judged against.',
-    '/recipes/classic-chocolate-chip-cookies.svg', 20, 12, 24, 'easy'),
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Chocolate_chip_cookies.jpg/640px-Chocolate_chip_cookies.jpg', 20, 12, 24, 'easy'),
 
   ('00000000-0000-0000-0000-000000000002', 'fudgy-brownies', 'Fudgy Brownies',
     'Dense, glossy-topped brownies with a deep chocolate flavor. No mixer required.',
-    '/recipes/fudgy-brownies.svg', 15, 30, 16, 'easy'),
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Chocolatebrownie.JPG/640px-Chocolatebrownie.JPG', 15, 30, 16, 'easy'),
 
   ('00000000-0000-0000-0000-000000000003', 'vanilla-bean-cupcakes', 'Vanilla Bean Cupcakes',
     'Light, tender cupcakes flecked with real vanilla bean, topped with a simple buttercream.',
@@ -76,27 +76,27 @@ values
 
   ('00000000-0000-0000-0000-000000000004', 'cinnamon-banana-bread', 'Cinnamon Sugar Banana Bread',
     'A moist, one-bowl banana bread with a crackly cinnamon-sugar crust. The best use for spotty bananas.',
-    '/recipes/cinnamon-banana-bread.svg', 15, 60, 10, 'easy'),
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Banana_bread_loaf_on_a_plate.jpg/640px-Banana_bread_loaf_on_a_plate.jpg', 15, 60, 10, 'easy'),
 
   ('00000000-0000-0000-0000-000000000005', 'no-knead-artisan-bread', 'No-Knead Artisan Bread',
     'A crackly-crusted, open-crumb loaf that needs almost no hands-on effort — just time. Start it the night before.',
-    '/recipes/no-knead-artisan-bread.svg', 20, 45, 8, 'easy'),
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sourdough_Bread_Loaf.jpg/640px-Sourdough_Bread_Loaf.jpg', 20, 45, 8, 'easy'),
 
   ('00000000-0000-0000-0000-000000000006', 'flaky-buttermilk-biscuits', 'Flaky Buttermilk Biscuits',
     'Tall, buttery layers that pull apart in sheets. Best eaten warm with a little more butter.',
-    '/recipes/flaky-buttermilk-biscuits.svg', 20, 15, 8, 'medium'),
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Buttermilk_biscuit.jpg/640px-Buttermilk_biscuit.jpg', 20, 15, 8, 'medium'),
 
   ('00000000-0000-0000-0000-000000000007', 'classic-apple-pie', 'Classic Apple Pie',
     'A double-crust pie packed with cinnamon-spiced apples under a golden, flaky crust.',
-    '/recipes/classic-apple-pie.svg', 45, 55, 8, 'hard'),
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Apple_pie.jpg/640px-Apple_pie.jpg', 45, 55, 8, 'hard'),
 
   ('00000000-0000-0000-0000-000000000008', 'lemon-tart', 'Lemon Tart',
     'A buttery shortcrust shell filled with bright, silky lemon curd. Sharp, sweet, and simple.',
-    '/recipes/lemon-tart.svg', 30, 35, 8, 'medium'),
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Lemon_tart_%28cropped%29.jpg/640px-Lemon_tart_%28cropped%29.jpg', 30, 35, 8, 'medium'),
 
   ('00000000-0000-0000-0000-000000000009', 'oatmeal-raisin-cookies', 'Oatmeal Raisin Cookies',
     'Chewy, spiced, and studded with plump raisins — a lunchbox classic.',
-    '/recipes/oatmeal-raisin-cookies.svg', 15, 12, 24, 'easy'),
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Baking_oatmeal_chocolate_chip_cookies_79.jpg/640px-Baking_oatmeal_chocolate_chip_cookies_79.jpg', 15, 12, 24, 'easy'),
 
   ('00000000-0000-0000-0000-000000000010', 'red-velvet-cupcakes', 'Red Velvet Cupcakes',
     'Cocoa-tinted cupcakes with a hint of tang, finished with cream cheese frosting.',
@@ -104,31 +104,31 @@ values
 
   ('00000000-0000-0000-0000-000000000011', 'cinnamon-rolls', 'Cinnamon Rolls',
     'Soft, pillowy rolls swirled with cinnamon-brown sugar filling and finished with cream cheese icing.',
-    '/recipes/cinnamon-rolls.svg', 30, 25, 12, 'hard'),
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Cinnamon_roll.jpg/640px-Cinnamon_roll.jpg', 30, 25, 12, 'hard'),
 
   ('00000000-0000-0000-0000-000000000012', 'blueberry-muffins', 'Blueberry Muffins',
     'Bakery-style muffins with domed, sugar-crusted tops and bursts of fresh blueberry in every bite.',
-    '/recipes/blueberry-muffins.svg', 15, 22, 12, 'easy'),
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Blueberry_muffins.jpg/640px-Blueberry_muffins.jpg', 15, 22, 12, 'easy'),
 
   ('00000000-0000-0000-0000-000000000013', 'peanut-butter-cookies', 'Peanut Butter Cookies',
     'Just a handful of ingredients — no flour needed — for a rich, fork-marked peanut butter cookie.',
-    '/recipes/peanut-butter-cookies.svg', 15, 10, 24, 'easy'),
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Big_Gigantoid_Crunchy_Peanut_Butter-Oatmeal_Cookies.jpg/640px-Big_Gigantoid_Crunchy_Peanut_Butter-Oatmeal_Cookies.jpg', 15, 10, 24, 'easy'),
 
   ('00000000-0000-0000-0000-000000000014', 'classic-carrot-cake', 'Classic Carrot Cake',
     'A spiced, ultra-moist carrot cake with walnuts and pineapple, topped with cream cheese frosting.',
-    '/recipes/classic-carrot-cake.svg', 30, 35, 12, 'medium'),
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Carrot_cake.jpg/640px-Carrot_cake.jpg', 30, 35, 12, 'medium'),
 
   ('00000000-0000-0000-0000-000000000015', 'flourless-chocolate-cake', 'Flourless Chocolate Cake',
     'A dense, brownie-like cake made from just chocolate, butter, eggs, and sugar. Naturally gluten-free.',
-    '/recipes/flourless-chocolate-cake.svg', 20, 35, 10, 'medium'),
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Chocolate_fudge_cake.jpg/640px-Chocolate_fudge_cake.jpg', 20, 35, 10, 'medium'),
 
   ('00000000-0000-0000-0000-000000000016', 'vegan-chocolate-chip-cookies', 'Vegan Chocolate Chip Cookies',
     'Crisp-edged, chewy-centered chocolate chip cookies made with no butter, dairy, or eggs.',
-    '/recipes/vegan-chocolate-chip-cookies.svg', 15, 12, 20, 'easy'),
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Vegan_oatmeal_chocolate_chip_cookies%2C_April_2009.jpg/640px-Vegan_oatmeal_chocolate_chip_cookies%2C_April_2009.jpg', 15, 12, 20, 'easy'),
 
   ('00000000-0000-0000-0000-000000000017', 'no-bake-cheesecake', 'No-Bake Cheesecake',
     'A creamy, tangy cheesecake set in the fridge instead of the oven, on a graham cracker crust.',
-    '/recipes/no-bake-cheesecake.svg', 25, 0, 10, 'easy'),
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Japanese_no-bake_cheesecake.jpg/640px-Japanese_no-bake_cheesecake.jpg', 25, 0, 10, 'easy'),
 
   ('00000000-0000-0000-0000-000000000018', 'rice-krispie-treats', 'Rice Krispie Treats',
     'Gooey, marshmallowy, ready in fifteen minutes flat. A stovetop classic.',
@@ -136,7 +136,7 @@ values
 
   ('00000000-0000-0000-0000-000000000019', 'homemade-croissants', 'Homemade Croissants',
     'Laminated, buttery, and flaky in a hundred layers. A weekend project worth every fold.',
-    '/recipes/homemade-croissants.svg', 60, 20, 8, 'hard'),
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Croissant.jpg/640px-Croissant.jpg', 60, 20, 8, 'hard'),
 
   ('00000000-0000-0000-0000-000000000020', 'zucchini-bread', 'Zucchini Bread',
     'A moist, cinnamon-spiced quick bread that sneaks in a whole cup of grated zucchini.',

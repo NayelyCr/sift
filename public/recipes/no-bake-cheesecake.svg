@@ -1,15 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="800" height="600">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f8dfa0"/>
-      <stop offset="100%" stop-color="#c47a2c"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.15" y2="1">
+      <stop offset="0%" stop-color="#f6ecd4"/>
+      <stop offset="100%" stop-color="#d9b378"/>
     </linearGradient>
+    <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
   </defs>
   <rect width="400" height="300" fill="url(#bg)"/>
-  <g transform="translate(60,10) scale(2.8)">
-    <path d="M25 52 L75 52 L68 34 L32 34 Z" fill="#fff8ee" opacity="0.95"/><rect x="25" y="52" width="50" height="6" rx="1.5" fill="#c9793f" opacity="0.6"/><circle cx="42" cy="30" r="2" fill="#8a3b3b" opacity="0.7"/><circle cx="52" cy="28" r="2" fill="#8a3b3b" opacity="0.7"/><circle cx="60" cy="31" r="2" fill="#8a3b3b" opacity="0.7"/>
-  </g>
-  <rect x="0" y="248" width="400" height="52" fill="#241a12" opacity="0.32"/>
-  <text x="200" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
-        font-size="22" fill="#fff8ee" font-weight="600">No-Bake Cheesecake</text>
+  <ellipse cx="200" cy="233" rx="92" ry="14" fill="url(#shadow)"/>
+  <path d="M118,215 L118,150 L288,150 L288,215 Q203,232 118,215 Z" fill="#e3ddc8"/>
+  <rect x="118" y="195" width="170" height="22" fill="#b9834a"/>
+  <rect x="120" y="150" width="166" height="46" fill="#fdf6df"/>
+  <path d="M112,152 L203,126 L294,152 L294,160 L203,134 L112,160 Z" fill="#fdf6df"/>
+  <ellipse cx="203" cy="139" rx="90" ry="16" fill="#fdf7e3"/>
+  <ellipse cx="185" cy="135" rx="20" ry="7" fill="#e34948" opacity="0.85"/>
+  <ellipse cx="220" cy="140" rx="14" ry="5" fill="#e34948" opacity="0.7"/>
 </svg>

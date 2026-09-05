@@ -1,15 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="800" height="600">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f8dfa0"/>
-      <stop offset="100%" stop-color="#c47a2c"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.15" y2="1">
+      <stop offset="0%" stop-color="#e9e3f0"/>
+      <stop offset="100%" stop-color="#8f8ac2"/>
     </linearGradient>
+    <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
   </defs>
   <rect width="400" height="300" fill="url(#bg)"/>
-  <g transform="translate(60,10) scale(2.8)">
-    <path d="M32 44 h36 l-3 18 a3 3 0 0 1 -3 3 h-24 a3 3 0 0 1 -3 -3 z" fill="#fff8ee" opacity="0.95"/><path d="M29 44 q21 -16 42 0 q-21 8 -42 0" fill="#fff8ee" opacity="0.95"/><circle cx="40" cy="38" r="1.6" fill="#3f5aa3"/><circle cx="52" cy="34" r="1.6" fill="#3f5aa3"/><circle cx="60" cy="40" r="1.6" fill="#3f5aa3"/>
-  </g>
-  <rect x="0" y="248" width="400" height="52" fill="#241a12" opacity="0.32"/>
-  <text x="200" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
-        font-size="22" fill="#fff8ee" font-weight="600">Blueberry Muffins</text>
+  <ellipse cx="200" cy="236" rx="82" ry="14" fill="url(#shadow)"/>
+  <path d="M125,210 L142,250 L258,250 L275,210 Z" fill="#eee6d2"/>
+  <path d="M125,208 Q132,220 140,208 L138,216 Q132,228 127,216 Z" fill="#beb8a8" opacity="0.7"/>
+  <path d="M140,208 Q148,220 155,208 L153,216 Q148,228 142,216 Z" fill="#beb8a8" opacity="0.7"/>
+  <path d="M155,208 Q162,220 170,208 L168,216 Q162,228 157,216 Z" fill="#beb8a8" opacity="0.7"/>
+  <path d="M170,208 Q178,220 185,208 L183,216 Q178,228 172,216 Z" fill="#beb8a8" opacity="0.7"/>
+  <path d="M185,208 Q192,220 200,208 L198,216 Q192,228 187,216 Z" fill="#beb8a8" opacity="0.7"/>
+  <path d="M200,208 Q208,220 215,208 L213,216 Q208,228 202,216 Z" fill="#beb8a8" opacity="0.7"/>
+  <path d="M215,208 Q222,220 230,208 L228,216 Q222,228 217,216 Z" fill="#beb8a8" opacity="0.7"/>
+  <path d="M230,208 Q238,220 245,208 L243,216 Q238,228 232,216 Z" fill="#beb8a8" opacity="0.7"/>
+  <path d="M245,208 Q252,220 260,208 L258,216 Q252,228 247,216 Z" fill="#beb8a8" opacity="0.7"/>
+  <path d="M260,208 Q268,220 275,208 L273,216 Q268,228 262,216 Z" fill="#beb8a8" opacity="0.7"/>
+  <path d="M122,212 Q200,175 278,212 Q255,155 200,150 Q145,155 122,212 Z" fill="#c0a56b"/>
+  <path d="M125,207 Q200,170 275,207 Q252,150 200,145 Q148,150 125,207 Z" fill="#e3c37f"/>
+  <circle cx="165" cy="160" r="7" fill="#3d4a8a"/>
+  <circle cx="163" cy="158" r="2.5" fill="#7c86bf"/>
+  <circle cx="210" cy="145" r="7" fill="#3d4a8a"/>
+  <circle cx="208" cy="143" r="2.5" fill="#7c86bf"/>
+  <circle cx="235" cy="170" r="7" fill="#3d4a8a"/>
+  <circle cx="233" cy="168" r="2.5" fill="#7c86bf"/>
+  <circle cx="190" cy="170" r="7" fill="#3d4a8a"/>
+  <circle cx="188" cy="168" r="2.5" fill="#7c86bf"/>
+  <circle cx="220" cy="185" r="7" fill="#3d4a8a"/>
+  <circle cx="218" cy="183" r="2.5" fill="#7c86bf"/>
+  <circle cx="175" cy="190" r="7" fill="#3d4a8a"/>
+  <circle cx="173" cy="188" r="2.5" fill="#7c86bf"/>
+  <circle cx="200" cy="130" r="7" fill="#3d4a8a"/>
+  <circle cx="198" cy="128" r="2.5" fill="#7c86bf"/>
 </svg>
